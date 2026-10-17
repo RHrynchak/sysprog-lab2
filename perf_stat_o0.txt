@@ -1,0 +1,26 @@
+Start 1500x1500...
+Result C[0]: 3000
+
+ Performance counter stats for './laba2':
+
+             1,513      context-switches                 #     53.9 cs/sec  cs_per_second     
+                18      cpu-migrations                   #      0.6 migrations/sec  migrations_per_second
+             6,733      page-faults                      #    240.0 faults/sec  page_faults_per_second
+         28,054.09 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+     3,656,360,819      L1-dcache-load-misses            #      2.6 %  l1d_miss_rate            (72.72%)
+        69,631,357      LLC-loads                        #     61.7 %  llc_miss_rate            (63.64%)
+         2,706,521      branch-misses                    #      0.0 %  branch_miss_rate         (54.55%)
+    37,265,594,478      branches                         #   1328.3 M/sec  branch_frequency     (54.56%)
+   115,649,264,650      cpu-cycles                       #      4.1 GHz  cycles_frequency       (54.56%)
+   348,537,782,139      instructions                     #      3.0 instructions  insn_per_cycle  (45.46%)
+                        TopdownL1                        #      9.3 %  tma_backend_bound      
+                                                         #     79.5 %  tma_bad_speculation      (63.63%)
+                                                         #      1.1 %  tma_frontend_bound       (63.62%)
+                                                         #     10.1 %  tma_retiring             (72.71%)
+
+      28.073309661 seconds time elapsed
+
+      28.024454000 seconds user
+       0.029988000 seconds sys
+
+
