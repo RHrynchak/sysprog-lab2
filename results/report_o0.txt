@@ -1,0 +1,71 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 25K of event 'cpu/cycles/P'
+# Event count (approx.): 108056531166
+#
+# Overhead  Command  Shared Object         Symbol                          
+# ........  .......  ....................  ................................
+#
+    51.61%  lab_o0   lab_o0                [.] dot()
+            |          
+             --51.60%--dot()
+                       |          
+                        --51.59%--step(int)
+                                  main
+                                  __libc_start_call_main
+                                  call_init (inlined)
+                                  __libc_start_main_impl (inlined)
+                                  _start
+
+    48.20%  lab_o0   lab_o0                [.] scale_add(float)
+            |          
+             --48.19%--scale_add(float)
+                       |          
+                        --48.17%--step(int)
+                                  main
+                                  __libc_start_call_main
+                                  call_init (inlined)
+                                  __libc_start_main_impl (inlined)
+                                  _start
+
+     0.04%  lab_o0   lab_o0                [.] main
+     0.03%  lab_o0   lab_o0                [.] step(int)
+     0.01%  lab_o0   [kernel.kallsyms]     [k] __update_load_avg_cfs_rq
+     0.01%  lab_o0   [kernel.kallsyms]     [k] sync_regs
+     0.00%  lab_o0   [kernel.kallsyms]     [k] _find_first_bit
+     0.00%  lab_o0   [kernel.kallsyms]     [k] its_return_thunk
+     0.00%  lab_o0   [kernel.kallsyms]     [k] native_irq_return_iret
+     0.00%  lab_o0   [kernel.kallsyms]     [k] __hrtimer_next_event_base
+     0.00%  lab_o0   [kernel.kallsyms]     [k] propagate_entity_load_avg
+     0.00%  lab_o0   [kernel.kallsyms]     [k] _raw_spin_lock_irq
+     0.00%  lab_o0   [kernel.kallsyms]     [k] update_fast_timekeeper
+     0.00%  lab_o0   [kernel.kallsyms]     [k] _raw_spin_lock
+     0.00%  lab_o0   [kernel.kallsyms]     [k] update_vdso_time_data
+     0.00%  lab_o0   [kernel.kallsyms]     [k] __hrtimer_run_queues
+     0.00%  lab_o0   [kernel.kallsyms]     [k] __raw_spin_lock_irqsave
+     0.00%  lab_o0   [kernel.kallsyms]     [k] lapic_next_deadline
+     0.00%  lab_o0   [kernel.kallsyms]     [k] irq_work_run_list
+     0.00%  lab_o0   [kernel.kallsyms]     [k] update_cfs_group
+     0.00%  lab_o0   [kernel.kallsyms]     [k] rcu_pending
+     0.00%  lab_o0   [i915]                [k] process_csb
+     0.00%  lab_o0   [kernel.kallsyms]     [k] raw_notifier_call_chain
+     0.00%  lab_o0   [kernel.kallsyms]     [k] read_tsc
+     0.00%  lab_o0   [kernel.kallsyms]     [k] wakeup_preempt_fair
+     0.00%  lab_o0   [kernel.kallsyms]     [k] tmigr_update_events
+     0.00%  lab_o0   [kernel.kallsyms]     [k] qi_submit_sync
+     0.00%  lab_o0   [kernel.kallsyms]     [k] __update_load_avg_se
+     0.00%  lab_o0   [kernel.kallsyms]     [k] sysvec_apic_timer_interrupt
+     0.00%  lab_o0   [kernel.kallsyms]     [k] update_se
+     0.00%  lab_o0   [kernel.kallsyms]     [k] idle_cpu
+     0.00%  lab_o0   [kernel.kallsyms]     [k] raw_spin_rq_lock_nested
+     0.00%  lab_o0   ld-linux-x86-64.so.2  [.] _dl_relocate_object_no_relro
+     0.00%  lab_o0   [kernel.kallsyms]     [k] vma_interval_tree_insert
+     0.00%  lab_o0   ld-linux-x86-64.so.2  [.] _dl_load_cache_lookup
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

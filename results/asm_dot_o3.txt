@@ -1,0 +1,32 @@
+00000000000013c0 <dot()>:
+    13c0:	endbr64
+    13c4:	vxorps xmm3,xmm3,xmm3
+    13c8:	lea    rcx,[rip+0x2d91]        # 4160 <c>
+    13cf:	lea    rdx,[rip+0x6d8a]        # 8160 <a>
+    13d6:	xor    eax,eax
+    13d8:	nop    DWORD PTR [rax+rax*1+0x0]
+    13e0:	vmovaps ymm1,YMMWORD PTR [rcx+rax*1]
+    13e5:	vmulps ymm1,ymm1,YMMWORD PTR [rdx+rax*1]
+    13ea:	add    rax,0x20
+    13ee:	vaddss xmm0,xmm1,xmm3
+    13f2:	vshufps xmm3,xmm1,xmm1,0x55
+    13f7:	vshufps xmm2,xmm1,xmm1,0xff
+    13fc:	vaddss xmm0,xmm0,xmm3
+    1400:	vunpckhps xmm3,xmm1,xmm1
+    1404:	vaddss xmm0,xmm0,xmm3
+    1408:	vaddss xmm0,xmm0,xmm2
+    140c:	vextractf32x4 xmm2,ymm1,0x1
+    1413:	vaddss xmm0,xmm0,xmm2
+    1417:	valignd ymm2,ymm1,ymm1,0x5
+    141e:	vaddss xmm0,xmm0,xmm2
+    1422:	valignd ymm2,ymm1,ymm1,0x6
+    1429:	valignd ymm1,ymm1,ymm1,0x7
+    1430:	vaddss xmm0,xmm0,xmm2
+    1434:	vaddss xmm3,xmm0,xmm1
+    1438:	cmp    rax,0x2000
+    143e:	jne    13e0 <dot()+0x20>
+    1440:	vmovaps xmm0,xmm3
+    1444:	vzeroupper
+    1447:	ret
+    1448:	nop    DWORD PTR [rax+rax*1+0x0]
+

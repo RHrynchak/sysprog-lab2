@@ -1,0 +1,29 @@
+00000000000012d9 <dot()>:
+    12d9:	endbr64
+    12dd:	push   rbp
+    12de:	mov    rbp,rsp
+    12e1:	pxor   xmm0,xmm0
+    12e5:	movss  DWORD PTR [rbp-0x8],xmm0
+    12ea:	mov    DWORD PTR [rbp-0x4],0x0
+    12f1:	jmp    133b <dot()+0x62>
+    12f3:	mov    eax,DWORD PTR [rbp-0x4]
+    12f6:	cdqe
+    12f8:	lea    rdx,[rax*4+0x0]
+    1300:	lea    rax,[rip+0x2e59]        # 4160 <a>
+    1307:	movss  xmm1,DWORD PTR [rdx+rax*1]
+    130c:	mov    eax,DWORD PTR [rbp-0x4]
+    130f:	cdqe
+    1311:	lea    rdx,[rax*4+0x0]
+    1319:	lea    rax,[rip+0x6e40]        # 8160 <c>
+    1320:	movss  xmm0,DWORD PTR [rdx+rax*1]
+    1325:	mulss  xmm0,xmm1
+    1329:	movss  xmm1,DWORD PTR [rbp-0x8]
+    132e:	addss  xmm0,xmm1
+    1332:	movss  DWORD PTR [rbp-0x8],xmm0
+    1337:	add    DWORD PTR [rbp-0x4],0x1
+    133b:	cmp    DWORD PTR [rbp-0x4],0x7ff
+    1342:	jle    12f3 <dot()+0x1a>
+    1344:	movss  xmm0,DWORD PTR [rbp-0x8]
+    1349:	pop    rbp
+    134a:	ret
+

@@ -1,9 +1,0 @@
-Start 1500x1500...
-Result C[0]: 3000
-
- Performance counter stats for 'system wide':
-
-            482.96 Joules power/energy-pkg/                                                     
-
-      27.572147193 seconds time elapsed
-

@@ -1,0 +1,33 @@
+000000000000125b <scale_add(float)>:
+    125b:	endbr64
+    125f:	push   rbp
+    1260:	mov    rbp,rsp
+    1263:	movss  DWORD PTR [rbp-0x14],xmm0
+    1268:	mov    DWORD PTR [rbp-0x4],0x0
+    126f:	jmp    12cc <scale_add(float)+0x71>
+    1271:	mov    eax,DWORD PTR [rbp-0x4]
+    1274:	cdqe
+    1276:	lea    rdx,[rax*4+0x0]
+    127e:	lea    rax,[rip+0x2edb]        # 4160 <a>
+    1285:	movss  xmm0,DWORD PTR [rdx+rax*1]
+    128a:	movaps xmm1,xmm0
+    128d:	mulss  xmm1,DWORD PTR [rbp-0x14]
+    1292:	mov    eax,DWORD PTR [rbp-0x4]
+    1295:	cdqe
+    1297:	lea    rdx,[rax*4+0x0]
+    129f:	lea    rax,[rip+0x4eba]        # 6160 <b>
+    12a6:	movss  xmm0,DWORD PTR [rdx+rax*1]
+    12ab:	addss  xmm0,xmm1
+    12af:	mov    eax,DWORD PTR [rbp-0x4]
+    12b2:	cdqe
+    12b4:	lea    rdx,[rax*4+0x0]
+    12bc:	lea    rax,[rip+0x6e9d]        # 8160 <c>
+    12c3:	movss  DWORD PTR [rdx+rax*1],xmm0
+    12c8:	add    DWORD PTR [rbp-0x4],0x1
+    12cc:	cmp    DWORD PTR [rbp-0x4],0x7ff
+    12d3:	jle    1271 <scale_add(float)+0x16>
+    12d5:	nop
+    12d6:	nop
+    12d7:	pop    rbp
+    12d8:	ret
+

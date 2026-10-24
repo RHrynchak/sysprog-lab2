@@ -1,0 +1,48 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cpu/cycles/P'
+# Event count (approx.): 25698926597
+#
+# Overhead  Command  Shared Object         Symbol                                   
+# ........  .......  ....................  .........................................
+#
+    95.92%  lab_o3   lab_o3                [.] dot()
+            |          
+             --95.87%--dot()
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     3.68%  lab_o3   lab_o3                [.] scale_add(float)
+            |
+            ---scale_add(float)
+               main
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main_impl (inlined)
+               _start
+
+     0.18%  lab_o3   lab_o3                [.] main
+     0.03%  lab_o3   [kernel.kallsyms]     [k] qi_check_fault
+     0.03%  lab_o3   [kernel.kallsyms]     [k] native_write_msr
+     0.02%  lab_o3   [kernel.kallsyms]     [k] native_irq_return_iret
+     0.02%  lab_o3   [kernel.kallsyms]     [k] hrtimer_update_next_event
+     0.02%  lab_o3   [kernel.kallsyms]     [k] asm_sysvec_apic_timer_interrupt
+     0.02%  lab_o3   lab_o3                [.] step(int)
+     0.02%  lab_o3   [kernel.kallsyms]     [k] __update_load_avg_se
+     0.02%  lab_o3   [kernel.kallsyms]     [k] arch_exit_to_user_mode_prepare.isra.0
+     0.02%  lab_o3   [kernel.kallsyms]     [k] native_apic_msr_eoi
+     0.02%  lab_o3   [kernel.kallsyms]     [k] sync_regs
+     0.02%  lab_o3   [kernel.kallsyms]     [k] timekeeping_adjust
+     0.00%  lab_o3   ld-linux-x86-64.so.2  [.] do_lookup_x
+     0.00%  lab_o3   [kernel.kallsyms]     [k] try_charge_memcg
+     0.00%  lab_o3   [kernel.kallsyms]     [k] next_uptodate_folio
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

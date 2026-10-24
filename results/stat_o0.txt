@@ -1,0 +1,24 @@
+
+ Performance counter stats for './lab_o0':
+
+               296      context-switches                 #     11.4 cs/sec  cs_per_second     
+                 1      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+               148      page-faults                      #      5.7 faults/sec  page_faults_per_second
+         25,940.79 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+        11,106,420      L1-dcache-load-misses            #      0.0 %  l1d_miss_rate            (72.72%)
+           120,721      LLC-loads                        #     10.0 %  llc_miss_rate            (63.63%)
+         6,237,515      branch-misses                    #      0.1 %  branch_miss_rate         (54.54%)
+    12,360,101,362      branches                         #    476.5 M/sec  branch_frequency     (54.55%)
+   108,032,487,226      cpu-cycles                       #      4.2 GHz  cycles_frequency       (54.55%)
+   233,887,847,392      instructions                     #      2.2 instructions  insn_per_cycle  (45.46%)
+                        TopdownL1                        #     12.9 %  tma_backend_bound      
+                                                         #     67.5 %  tma_bad_speculation      (63.64%)
+                                                         #      2.4 %  tma_frontend_bound       (63.64%)
+                                                         #     17.2 %  tma_retiring             (72.72%)
+
+      25.944806478 seconds time elapsed
+
+      25.940569000 seconds user
+       0.000999000 seconds sys
+
+
